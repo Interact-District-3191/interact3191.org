@@ -1,0 +1,56 @@
+/* Shared people-photo treatment. Preserve person-specific framing across pages. */
+:is(.member-portrait, .legacy-portrait) img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--portrait-position, center 20%);
+  transform-origin: var(--portrait-origin, center);
+  transform: scale(var(--portrait-scale, 1)) translateX(var(--portrait-shift, 0%));
+  transition: transform 400ms ease;
+}
+.member-photo-anil { --portrait-position: center 10%; }
+.member-photo-vinay { --portrait-position: center; --portrait-scale: 1; --portrait-hover-scale: 1.045; --portrait-origin: center; --portrait-shift: 0%; mix-blend-mode: multiply; }
+.member-photo-karthik { --portrait-position: center top; --portrait-scale: 1.16; --portrait-hover-scale: 1.2; --portrait-shift: -6%; --portrait-origin: center top; }
+.member-photo-anirudh { --portrait-position: center 54%; --portrait-scale: 1.3; --portrait-hover-scale: 1.34; --portrait-shift: -11%; --portrait-origin: center top; }
+.member-photo-jashruth { --portrait-position: 47% 20%; }
+.member-photo-swetlana { --portrait-position: center 45%; --portrait-scale: 1.18; --portrait-hover-scale: 1.23; --portrait-origin: 50% 42%; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  :is(.member-portrait, .legacy-portrait):hover img { transform: scale(var(--portrait-hover-scale, 1.045)) translateX(var(--portrait-shift, 0%)); }
+}
+
+/* Portrait framing: centred faces with a small natural margin above the head. */
+.member-photo-anil { --team-position: 50.00% 5.50%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-karthik { --team-position: 100.00% 0.00%; --team-scale: 1.12; --team-x: -2.18%; --team-y: 0.00%; }
+.member-photo-vinay { --team-position: 50.00% 0.00%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-anirudh { --team-position: 50.00% 59.98%; --team-scale: 1.22; --team-x: -11.00%; --team-y: 0.00%; }
+.member-photo-swetlana { --team-position: 50.00% 48.70%; --team-scale: 1.1; --team-x: -1.10%; --team-y: 0.00%; }
+.member-photo-harshavardhan { --team-position: 50.00% 0.00%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-bhavik { --team-position: 50.00% 7.50%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-sadhana { --team-position: 50.00% 7.50%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-rakshith { --team-position: 0.00% 0.00%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-fahad { --team-position: 36.12% 0.00%; --team-scale: 1.18; --team-x: 0.00%; --team-y: -18.00%; }
+.member-photo-lydia { --team-position: 50.00% 79.09%; --team-scale: 1.3; --team-x: 15.00%; --team-y: 0.00%; }
+.member-photo-alwin { --team-position: 50.00% 7.00%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-pravalika { --team-position: 50.00% 71.57%; --team-scale: 1.15; --team-x: 1.15%; --team-y: 0.00%; }
+.member-photo-sona { --team-position: 50.00% 11.20%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-ayush { --team-position: 50.00% 40.06%; --team-scale: 1.08; --team-x: -2.16%; --team-y: 0.00%; }
+.member-photo-sreevanth { --team-position: 50.00% 0.00%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-avantikaa { --team-position: 50.00% 100.00%; --team-scale: 1.22; --team-x: -6.10%; --team-y: -22.00%; }
+.member-photo-urmila { --team-position: 50.00% 0.00%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-akanksha { --team-position: 50.00% 100.00%; --team-scale: 1.5; --team-x: 12.00%; --team-y: -27.59%; }
+.member-photo-tanmay { --team-position: 0.00% 100.00%; --team-scale: 1.1; --team-x: 1.10%; --team-y: -3.39%; }
+.member-photo-arjun { --team-position: 50.00% 62.29%; --team-scale: 1.12; --team-x: -4.48%; --team-y: 0.00%; }
+.member-photo-mridhul { --team-position: 50.00% 93.27%; --team-scale: 1.4; --team-x: -1.40%; --team-y: 0.00%; }
+.member-photo-radhika { --team-position: 50.00% 18.32%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-hadi { --team-position: 50.00% 28.29%; --team-scale: 1.05; --team-x: 1.05%; --team-y: 0.00%; }
+.member-photo-kanishaa { --team-position: 50.00% 51.50%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-arunima { --team-position: 50.00% 32.63%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-sathish { --team-position: 38.07% 0.00%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-jyosshika { --team-position: 100.00% 89.44%; --team-scale: 1.05; --team-x: -2.50%; --team-y: 0.00%; }
+.member-photo-jashruth { --team-position: 64.94% 0.00%; --team-scale: 1.05; --team-x: 0.00%; --team-y: -5.00%; }
+.member-photo-krithika { --team-position: 50.00% 0.00%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-archana { --team-position: 50.00% 35.50%; --team-scale: 1; --team-x: 0.00%; --team-y: 0.00%; }
+.member-photo-kavya { --team-position: 50.00% 100.00%; --team-scale: 1.1; --team-x: -1.10%; --team-y: -7.70%; }
+

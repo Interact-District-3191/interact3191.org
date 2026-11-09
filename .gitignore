@@ -1,0 +1,14 @@
+node_modules/
+dist/
+tmp/
+output/
+.env
+.env.*
+!.env.example
+*.local
+*.log
+.codex/
+.agents/
+.aws/
+.DS_Store
+Thumbs.db
